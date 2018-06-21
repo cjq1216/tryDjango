@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+     <form action="/search-post" method="post">
+        {% csrf_token %}
+        <input type="text" name="q">
+        <input type="submit" value="搜索">
+    </form>
+
+    <p>{{ rlt }}</p>
+{% endblock %}
